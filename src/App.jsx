@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./componentes/header/Header.jsx";
 import "./App.css";
-import Listaproductos from "./componentes/ListaProductos/ListaProductos.jsx";
+import Listaproductos from "./componentes/Listaproductos/ListaProductos.jsx";
 import FormularioProducto from "./componentes/FormularioProducto/FormularioProducto.jsx";
 function App() {
   return (
