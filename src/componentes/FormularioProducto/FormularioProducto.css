@@ -1,13 +1,14 @@
-/* FormularioProducto.css */
 
 .formulario-container {
-  max-width: 500px;
-  margin: 3rem auto;
+   
+  width: 100%;
+  max-width: 400px;
   padding: 2rem;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 .formulario-container h2 {
   text-align: center;

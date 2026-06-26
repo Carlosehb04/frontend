@@ -1,9 +1,12 @@
 import "./FormularioProducto.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FormularioProducto() {
   const [nombre, setNombre] = useState("");
   const [precio, setPrecio] = useState("");
+
+  const navigate = useNavigate();
 
   const agregarProducto = async (e) => {
     e.preventDefault();
@@ -29,11 +32,12 @@ function FormularioProducto() {
         throw new Error("Error al crear el producto");
       }
 
-      const data = await res.json();
-      console.log(data);
-      
       setNombre("");
       setPrecio("");
+
+      navigate("/");
+
+      window.location.reload();
     } catch (error) {
       console.error(error.message);
     }
@@ -41,6 +45,8 @@ function FormularioProducto() {
 
   return (
     <>
+
+   
       <div className="formulario-container">
         <h2>Agregar Producto</h2>
         <form className="formulario" onSubmit={agregarProducto}>
@@ -59,6 +65,7 @@ function FormularioProducto() {
           <button type="submit">Agregar Producto</button>
         </form>
       </div>
+
     </>
   );
 }

@@ -4,15 +4,21 @@ import Header from "./componentes/header/Header.jsx";
 import "./App.css";
 import Listaproductos from "./componentes/Listaproductos/ListaProductos.jsx";
 import FormularioProducto from "./componentes/FormularioProducto/FormularioProducto.jsx";
+import Footer from "./componentes/footer/Footer.jsx";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Listaproductos />} />
-          <Route path="/agregar" element={<FormularioProducto />} />
-        </Routes>
+        <div className="app">
+          <Header />
+          <main className="contenido">
+            <Routes>
+              <Route path="/" element={<Listaproductos />} />
+              <Route path="/agregar" element={<FormularioProducto />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </>
   );
